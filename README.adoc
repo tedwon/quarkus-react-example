@@ -1,23 +1,16 @@
-= React & Quarkus Example Project
+= React & Quarkus Example Project for *Production* Build
 
 Created based on the Quarkus article https://quarkus.io/blog/gui-react-patternfly/[Adding Eyecandy to your Quarkus App with React and Patternfly - Quarkus]
 
-== Step 1. Run Quarkus
+== Step 1. Build & Run Quarkus
 
 [source,bash,options="nowrap"]
 ----
 cd $PROJECT_HOME
 
-quarkus dev
-----
+mvn clean package
 
-== Step 2. Run React
-
-[source,bash,options="nowrap"]
-----
-cd $PROJECT_HOME/src/main/webapp
-
-npm start
+java -jar target/quarkus-app/quarkus-run.jar
 ----
 
 == Test URLs
@@ -25,7 +18,3 @@ npm start
 http://localhost:8080
 
 http://localhost:8080/particles
-
-http://localhost:3000
-
-http://localhost:3000/particles
